@@ -5,6 +5,7 @@ import { MenuItem } from "primeng/api";
 export class UserModel {
   name!: string;
   email!: string;
+  token!: string;
   role!: 'superUser' | 'admin' | 'seller' | 'counter' | 'client' | undefined; // Roles predefinidos
   permissions!: {
     canRead: boolean;
@@ -32,11 +33,4 @@ export class UserModel {
 }
 
 
-export const InitialUsers = [
-  { name: 'superUser', code: 'su' },
-  { name: 'admin', code: 'admin' },
-  { name: 'seller1', code: 'seller1' },
-  { name: 'seller2', code: 'seller2' },
-  { name: 'counter1', code: 'counter1' },
-  { name: 'client1', code: 'client1' },
-]
+

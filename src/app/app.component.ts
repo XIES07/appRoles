@@ -1,3 +1,4 @@
+import { AuthService } from './core/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from './core/models/ngrx.models';
@@ -15,21 +16,16 @@ export class AppComponent implements OnInit {
   user: UserModel = unidentifiedUser;
 
   title = 'appRoles';
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<AppState>, private authService: AuthService) {
+    this.loadUserFromLocalStorage();
+   }
 
   ngOnInit(): void {
-    this.loadUserFromLocalStorage();
     this.store.dispatch(browserReloaded({ user: this.user }))
   }
 
   loadUserFromLocalStorage() {
-    const userData = localStorage.getItem('user');
-
-    if (userData) {
-      this.user = JSON.parse(userData) as UserModel
-    } else {
-      return
-    }
+    this.user = this.authService.loadUserFromToken()
   }
 
 }

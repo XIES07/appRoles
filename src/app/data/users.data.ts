@@ -4,6 +4,7 @@ import { UserModel } from "../core/models/user.model";
 export const unidentifiedUser: UserModel = {
   name: '',
   email: '',
+  token: '',
   role: undefined,
   permissions: {
     canRead: false,
@@ -33,6 +34,7 @@ export const unidentifiedUser: UserModel = {
 export const superUser1: UserModel = {
   name: 'Alice Smith',
   email: 'alice@example.com',
+  token: 'Su52',
   role: 'superUser',
   permissions: {
     canRead: true,
@@ -63,6 +65,7 @@ export const superUser1: UserModel = {
 export const admin1: UserModel = {
   name: 'Bob Johnson',
   email: 'bob@example.com',
+  token: 'Ad52',
   role: 'admin',
   permissions: {
     canRead: true,
@@ -93,6 +96,7 @@ export const admin1: UserModel = {
 export const seller1: UserModel = {
   name: 'Carlos Pérez',
   email: 'carlos.perez@example.com',
+  token: 'Sell52',
   role: 'seller',
   permissions: {
     canRead: true,
@@ -122,6 +126,7 @@ export const seller1: UserModel = {
 export const seller2: UserModel = {
   name: 'María Gómez',
   email: 'maria.gomez@example.com',
+  token: 'Sell53',
   role: 'seller',
   permissions: {
     canRead: true,
@@ -151,6 +156,7 @@ export const seller2: UserModel = {
 export const counter1: UserModel = {
   name: 'Lucía Fernández',
   email: 'lucia.fernandez@example.com',
+  token: 'Counter52',
   role: 'counter',
   permissions: {
     canRead: true,
@@ -180,6 +186,7 @@ export const counter1: UserModel = {
 export const client1: UserModel = {
   name: 'Juan Martínez',
   email: 'juan.martinez@example.com',
+  token: 'Client52',
   role: 'client',
   permissions: {
     canRead: true,
@@ -205,3 +212,12 @@ export const client1: UserModel = {
     logOut: true,
   }
 };
+
+export const InitialUsers: UserModel[] = [
+  superUser1,
+  admin1,
+  seller1,
+  seller2,
+  counter1,
+  client1
+]
