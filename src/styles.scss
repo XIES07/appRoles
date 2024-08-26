@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.route{
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .menubar {
+    width: 100%;
+    height: 10vh;
+    }
+    
+    
+    .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 10vh;
+    background-color: #D1C2CB ;
+    }
+
+@import './assets/custom-theme/mytheme/theme.scss';
+
+@import "primeng/resources/primeng.css";
+
+@import 'primeicons/primeicons.css';

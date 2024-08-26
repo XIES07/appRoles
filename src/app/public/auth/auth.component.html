@@ -1,0 +1,10 @@
+<div class="route" >
+    <h1>Select Type Of User</h1>
+    <br>
+    <div>
+        <p-dropdown [options]="users" optionLabel="name" [(ngModel)]="selectedUser"></p-dropdown>
+        <p-button (click)="login()" label="Login" styleClass="p-button-help"></p-button>
+    </div>
+    
+</div>
+

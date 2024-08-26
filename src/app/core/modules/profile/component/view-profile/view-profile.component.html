@@ -1,0 +1,11 @@
+<div *ngIf="user$ | async as user" class="route">
+    <h2>{{user.name}}</h2>
+    <br>
+    <h4>role: {{user.role}}</h4>
+    <br>
+    <h4>permissions: {{user.permissions | json}}</h4>
+    <br>
+    <h4>acces: {{user.access | json}}</h4>
+    <br>
+    <h4>accessSubModule: {{user.accessSubModule | json}}</h4>
+</div>

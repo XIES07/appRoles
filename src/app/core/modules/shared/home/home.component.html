@@ -1,0 +1,7 @@
+
+    <div *ngIf="user$ | async as user" class="route" >
+        <h3>Bienvenido {{user.name}} </h3>
+        <br>
+        <h4>Usted es un: {{user.role}}</h4>
+        <small>(mas informacion del usuario en perfil)</small>
+    </div>
